@@ -1,7 +1,19 @@
 <div class="contentMain">
-  <input type="text" [(ngModel)]="searchTerm" placeholder="Buscar productos" (input)="searchProducts()"
-  />
-  <button (click)="openCreateProductModal()">Crear Producto</button>
+  <div class="contentSearch">
+    <input
+      class="inputSearch"
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="Buscar productos"
+      (input)="searchProducts()"
+    />
+    <button (click)="openCreateProductModal()" class="createButton">
+      <div class="container">
+        <img src="assets/svg/add.svg" alt="Editar" class="icon" />
+        <div class="text">Crear Producto</div>
+      </div>
+    </button>
+  </div>
 
   <div class="contentTable">
     <table>
@@ -16,25 +28,27 @@
         <tr *ngFor="let product of filteredProducts">
           <td>{{ product.name }}</td>
           <td>{{ product.description }}</td>
-          <td style="width: 14rem;">
-            <button (click)="viewDetails(product)">Ver</button>
-            <button (click)="editProduct(product)">Editar</button>
-            <button (click)="confirmDelete(product)">Eliminar</button>
+          <td style="width: 10%;">
+            <div class="contentButton">
+              <button class="buttonsAction" title="Ver Producto" (click)="viewDetails(product)"><img src="assets/svg/Eye.svg" alt="Editar" class="icon" /></button>
+              <button class="buttonsAction" title="Editar Producto" (click)="editProduct(product)"><img src="assets/svg/Edit.svg" alt="Editar" class="icon" /></button>
+              <button class="buttonsAction" title="Eliminar Producto" (click)="confirmDelete(product)"><img src="assets/svg/Trash.svg" alt="Editar" class="icon" /></button>
+            </div>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
+
   <app-product-form-modal
     *ngIf="isProductFormModalOpen"
     [product]="selectedProduct"
     (close)="closeProductFormModal($event)"
   ></app-product-form-modal>
-  
+
   <app-confirm-dialog
     *ngIf="isDelete"
     (confirmed)="deleteProduct()"
     (cancelled)="cancelDelete()"
   ></app-confirm-dialog>
 </div>
-

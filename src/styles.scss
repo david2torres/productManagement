@@ -8,7 +8,7 @@ body {
 body::after {
   content: "";
   background-image: url('assets/img/museum-background.png');
-  filter: blur(1px);
+  filter: blur(10px);
   position: absolute;
   top: 0;
   left: 0;
