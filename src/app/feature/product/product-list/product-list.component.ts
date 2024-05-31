@@ -37,7 +37,9 @@ export class ProductListComponent implements OnInit {
   }
 
   editProduct(product: Product): void {
-    this.router.navigate(['/edit-product', product.id]);
+    this.selectedProduct = product;
+    this.isProductFormModalOpen = true;
+    // this.router.navigate(['/edit-product', product.id]);
   }
 
   confirmDelete(product: Product): void {

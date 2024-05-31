@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './feature/product/product-list/product-list.component';
 import { ProductDetailComponent } from './feature/product/product-detail/product-detail.component';
-import { ProductFormComponent } from './feature/product/product-form/product-form.component';
 import { ConfirmDialogComponent } from './shared/components/confirm-dialog/confirm-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductFormModalComponent } from './shared/components/product-form-modal/product-form-modal.component';
@@ -15,7 +14,6 @@ import { ProductFormModalComponent } from './shared/components/product-form-moda
     AppComponent,
     ProductListComponent,
     ProductDetailComponent,
-    ProductFormComponent,
     ConfirmDialogComponent,
     ProductFormModalComponent,
   ],
