@@ -1,5 +1,14 @@
-<div>
-  <p>¿Está seguro de que desea eliminar este producto?</p>
-  <button (click)="confirm()">Confirmar</button>
-  <button (click)="cancel()">Cancelar</button>
+<div class="confirm-dialog">
+  <div class="header">
+    <img src="assets/svg/delete.svg" alt="Icono" />
+  </div>
+  <p class="textProduct">¿Está seguro de que desea eliminar este producto?</p>
+  <div class="contentButton">
+    <button class="simpleButton" (click)="confirm()">Confirmar</button>
+    <button class="simpleButton" (click)="cancel()">Cancelar</button>
+  </div>
 </div>
+
+<!-- Fondo oscuro -->
+<div class="modal-backdrop"></div>
+

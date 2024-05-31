@@ -1,0 +1,67 @@
+/* Estilos para la tabla */
+
+.contentMain {
+  padding: 10rem;
+  position: absolute;
+  width: 78%;
+}
+
+.contentTable {
+  display: grid;
+  grid-auto-flow: column;
+  padding-top: 1rem;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f0f8ffbd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+}
+
+
+button {
+  margin-left: 1rem;
+  color: #fff;
+  padding: 9px 12px;
+  background-color: #00527f;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  font-size: 11px;
+  border: 0;
+  user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input[type="text"] {
+  padding: 5px;
+  width: 200px;
+}
+
+input[type="text"],
+button {
+  margin-bottom: 10px;
+}
+
+tbody tr:hover {
+  background-color: #f0f8ff41;
+}

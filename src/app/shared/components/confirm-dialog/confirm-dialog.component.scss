@@ -1,20 +1,61 @@
-/* src/app/confirm-dialog/confirm-dialog.component.scss */
-.modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
+.confirm-dialog {
+  display: grid;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  max-width: 20rem;
+
+  .header {
     text-align: center;
+    margin-bottom: 20px;
   }
-  
+
+  .textProduct {
+    font-family: Roboto Condensed;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23.44px;
+    text-align: center;
+
+  }
+
+  .contentButton {
+    cursor: pointer;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 12px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .simpleButton {
+      padding: 8px 16px 8px 16px;
+      border-radius: 50px;
+    }
+
+    .simpleButton:hover {
+      background-color: white;
+    }
+
+  }
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+}
+
+
+.confirm-dialog.hidden {
+  display: none;
+}
