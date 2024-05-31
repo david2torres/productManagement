@@ -1,8 +1,16 @@
-
-<div *ngIf="product">
-  <h2>{{ product.name }}</h2>
-  <p>{{ product.description }}</p>
-  <img [src]="product.imageUrl" alt="{{ product.name }}" />
+<div class="modal" *ngIf="product">
+  <div class="contentView">
+    <div class="header">
+      <h1>Detalle del Producto</h1>
+    </div>
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <div class="image-container">
+      <img class="image-url" [src]="product.imageUrl" alt="{{ product.name }}" />
+    </div>
+  </div>
   <p>Fecha de creación: {{ product.creationDate | date }}</p>
-  <button (click)="close()">Cerrar</button>
+  <div class="contentButton">
+    <button class="simpleButton" (click)="close()">Cerrar</button>
+  </div>
 </div>

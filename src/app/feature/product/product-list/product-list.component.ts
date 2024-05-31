@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from '../../../shared/interfaces/product.interface';
 import { ProductService } from '../../../core/services/productService/product.service';
-import { selectedProduct } from 'src/app/shared/interfaces/product.constants';
+import { selectedProduct } from 'src/app/shared/constants/product.constants';
 
 @Component({
   selector: 'app-product-list',
@@ -39,7 +39,6 @@ export class ProductListComponent implements OnInit {
   editProduct(product: Product): void {
     this.selectedProduct = product;
     this.isProductFormModalOpen = true;
-    // this.router.navigate(['/edit-product', product.id]);
   }
 
   confirmDelete(product: Product): void {

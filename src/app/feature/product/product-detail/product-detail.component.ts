@@ -1,9 +1,7 @@
-// src/app/product-detail/product-detail.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../../../shared/interfaces/product.interface';
 import { ProductService } from '../../../core/services/productService/product.service';
-
 
 @Component({
   selector: 'app-product-detail',

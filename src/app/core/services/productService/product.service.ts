@@ -1,34 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 import { Product } from '../../../shared/interfaces/product.interface';
+import { initList } from 'src/app/shared/constants/product.constants';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductService {
-  private products: Product[] = [
-    {
-      id: 1,
-      name: 'Product 1',
-      description: 'Description 1',
-      imageUrl: 'https://via.placeholder.com/150',
-      creationDate: new Date(),
-    },
-    {
-      id: 2,
-      name: 'Product 2',
-      description: 'Description 2',
-      imageUrl: 'https://via.placeholder.com/150',
-      creationDate: new Date(),
-    },
-    {
-      id: 3,
-      name: 'Product 3',
-      description: 'Description 3',
-      imageUrl: 'https://via.placeholder.com/150',
-      creationDate: new Date(),
-    },
-  ];
+  private products: Product[] = initList;
 
   getProducts(): Observable<Product[]> {
     return of(this.products);

@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { Product } from '../../interfaces/product.interface';
 import { ProductService } from 'src/app/core/services/productService/product.service';
-import { selectedProduct } from '../../interfaces/product.constants';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -30,7 +29,7 @@ export class ProductFormModalComponent implements OnInit {
   }
 
   private mapEditForm(isEdit: boolean, product: Product): void {
-    debugger;
+    ;
     if (isEdit) {
       this.productForm.patchValue(product);
     }
