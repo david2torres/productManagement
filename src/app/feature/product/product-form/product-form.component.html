@@ -1,0 +1,19 @@
+<div>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="name">Nombre</label>
+        <input id="name" formControlName="name" />
+      </div>
+      <div>
+        <label for="description">Descripción</label>
+        <input id="description" formControlName="description" />
+      </div>
+      <div>
+        <label for="imageUrl">URL de la Imagen</label>
+        <input id="imageUrl" formControlName="imageUrl" />
+      </div>
+      <button type="submit">{{ isEditMode ? 'Actualizar' : 'Crear' }}</button>
+      <button type="button" (click)="cancel()">Cancelar</button>
+    </form>
+  </div>
+  

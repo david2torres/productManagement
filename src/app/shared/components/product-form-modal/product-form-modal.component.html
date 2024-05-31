@@ -1,0 +1,41 @@
+<div class="modal">
+  <div class="modal-content">
+    <h2>{{ isEditMode ? "Editar Producto" : "Crear Producto" }}</h2>
+    <form (ngSubmit)="onSubmit()" *ngIf="product">
+      <div>
+        <label for="name">Nombre:</label>
+        <input
+          type="text"
+          id="name"
+          [(ngModel)]="product.name"
+          name="name"
+          required
+        />
+      </div>
+      <div>
+        <label for="description">Descripción:</label>
+        <input
+          type="text"
+          id="description"
+          [(ngModel)]="product.description"
+          name="description"
+          required
+        />
+      </div>
+      <div>
+        <label for="imageUrl">URL de la Imagen:</label>
+        <input
+          type="text"
+          id="imageUrl"
+          [(ngModel)]="product.imageUrl"
+          name="imageUrl"
+          required
+        />
+      </div>
+      <button type="submit">
+        {{ isEditMode ? "Guardar Cambios" : "Crear Producto" }}
+      </button>
+      <button type="button" (click)="onClose()">Cancelar</button>
+    </form>
+  </div>
+</div>

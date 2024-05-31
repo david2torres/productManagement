@@ -1,0 +1,41 @@
+<div>
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="Buscar productos"
+    (input)="searchProducts()"
+  />
+  <button (click)="openCreateProductModal()">Crear Producto</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of filteredProducts">
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>
+          <button (click)="viewDetails(product)">Ver</button>
+          <button (click)="editProduct(product)">Editar</button>
+          <button (click)="confirmDelete(product)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-product-form-modal
+  *ngIf="isProductFormModalOpen"
+  [product]="selectedProduct"
+  (close)="closeProductFormModal($event)"
+></app-product-form-modal>
+
+<app-confirm-dialog
+  *ngIf="isDelete"
+  (confirmed)="deleteProduct()"
+  (cancelled)="cancelDelete()"
+></app-confirm-dialog>
